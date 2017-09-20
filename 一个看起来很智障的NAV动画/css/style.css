@@ -1,70 +1,89 @@
-body{
+body
+{
     background-color: #bebebe;
 }
-#nav{
+#nav
+{
     height: 50px;
+
     border: 1px solid gray;
 }
-#nav .nav-menu{
+#nav .nav-menu
+{
     display: block;
+
     width: 950px;
     height: 50px;
     margin: 0 auto;
 }
 /*直接子元素，不选择孙元素*/
-#nav .nav-menu > li{
-        height: 50px;
-        float: left;
-        border: 1px solid black;
-        list-style: none;
-        width:auto;
-        border-radius: 10px;
-}
-#nav .nav-menu li a{
-    width: 132px;
-    color: #FFFFFF;
+#nav .nav-menu > li
+{
+    float: left;
+
+    width: auto;
     height: 50px;
-    line-height: 50px;
-    text-decoration: none;
-    font-size: 24px;
-    display: block;
-    text-align: center;
+
+    list-style: none;
+
+    border: 1px solid black;
     border-radius: 10px;
-    
 }
-#nav .nav-menu li .three-d{
+#nav .nav-menu li a
+{
+    font-size: 24px;
+    line-height: 50px;
+
+    display: block;
+
+    width: 132px;
+    height: 50px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #fff;
+    border-radius: 10px;
+}
+#nav .nav-menu li .three-d
+{
     position: relative;
+
     perspective: 200px;
 }
-#nav .nav-menu li .three-d-box{
+#nav .nav-menu li .three-d-box
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
     width: 100%;
     height: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    transform-style: preserve-3d; 
 
-
+    transform-style: preserve-3d;
 }
-#nav .nav-menu li .three-d-box .font , #nav .nav-menu li .three-d-box .back{
+#nav .nav-menu li .three-d-box .font,
+#nav .nav-menu li .three-d-box .back
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: #47C7A1;
+
     border-radius: 10px;
-    
+    background-color: #47c7a1;
+}
 
+#nav .nav-menu li .three-d-box .back
+{
+    transform: rotateX(-90deg);
+
+    background-color: #349ad4;
 }
-#nav .nav-menu li .three-d-box .font{
-     
-}
-#nav .nav-menu li .three-d-box .back{
-    background-color: #349AD4;
-    transform:  rotateX(-90deg);
-}
-#nav .nav-menu li .three-d:hover .three-d-box{
+#nav .nav-menu li .three-d:hover .three-d-box
+{
+    transition: all .4s linear;
     transform: rotateX(90deg);
-    transition: all 0.4s linear;
 }
